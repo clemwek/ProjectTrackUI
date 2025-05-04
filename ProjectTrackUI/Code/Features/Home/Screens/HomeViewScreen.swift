@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
-      Text("HomeViewScreen")
+
+  var body: some View {
+
+    NavigationStack {
+      HomeHeadingContainerView()
+        .padding()
+      Spacer()
     }
+  }
 }
 
 #Preview {
