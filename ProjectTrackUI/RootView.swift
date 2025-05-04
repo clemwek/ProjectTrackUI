@@ -8,15 +8,48 @@
 import SwiftUI
 
 struct RootView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+  enum Tab {
+    case home, profile, newProject, progress, notifications
+  }
+
+  @State private var selectedTab: Tab = .home
+
+  var body: some View {
+
+    TabView(selection: $selectedTab) {
+
+      HomeView()
+        .tabItem {
+          Label("Home", systemImage: "house")
         }
-        .padding()
+        .tag(Tab.home)
+
+      ProfileViewScreen()
+        .tabItem {
+          Label("Profile", systemImage: "person.circle")
+        }
+        .tag(Tab.profile)
+
+      NewProjectViewScreen()
+        .tabItem {
+          Label("New Project", systemImage: "plus")
+        }
+        .tag(Tab.newProject)
+
+      ProgressViewScreen()
+        .tabItem {
+          Label("Progress", systemImage: "barometer")
+        }
+        .tag(Tab.progress)
+
+      NotificationsViewScreen()
+        .tabItem {
+          Label("Notifications", systemImage: "bell")
+        }
+        .tag(Tab.notifications)
     }
+  }
 }
 
 #Preview {
