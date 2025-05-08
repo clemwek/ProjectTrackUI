@@ -12,7 +12,7 @@ struct HomeHeadingSearchView: View {
   @State private var searchText: String = ""
 
   var body: some View {
-    HStack(alignment: .top) {
+    HStack(alignment: .bottom) {
       Image(systemName: "magnifyingglass")
         .resizable()
         .frame(width: 15, height: 15)

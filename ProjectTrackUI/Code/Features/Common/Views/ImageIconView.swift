@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ImageIconView: View {
 
-  @State var imageURL: String = "https://cdn-icons-png.flaticon.com/512/4086/4086679.png"
-  @State var imageSize = 25
-  
+  var imageURL: String = "https://cdn-icons-png.flaticon.com/512/4086/4086679.png"
+  var imageSize = 25
+
   var body: some View {
     AsyncImage(url: URL(string: imageURL)) { image in
       image
@@ -27,5 +27,5 @@ struct ImageIconView: View {
 }
 
 #Preview {
-    ImageIconView()
+  ImageIconView()
 }

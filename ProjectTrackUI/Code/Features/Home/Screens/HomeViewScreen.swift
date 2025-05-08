@@ -15,6 +15,7 @@ struct HomeView: View {
       HomeHeadingContainerView()
         .padding()
       HomeProjectListContainerView()
+      HomeProgressContainerView()
       Spacer()
     }
   }
