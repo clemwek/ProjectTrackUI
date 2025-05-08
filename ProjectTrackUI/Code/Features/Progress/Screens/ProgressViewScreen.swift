@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ProgressViewScreen: View {
-    var body: some View {
-        Text("ProgressViewScreen")
-    }
+  var body: some View {
+    ProgressHeadContainerView()
+  }
 }
 
 #Preview {
-    ProfileViewScreen()
+  ProfileViewScreen()
 }
